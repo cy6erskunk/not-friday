@@ -17,6 +17,9 @@ const randomCountry = countries[Math.floor(Math.random() * countries.length)]
 
 export default (request: VercelRequest, response: VercelResponse) => {
   response.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate')
+  response.setHeader('Pragma', 'no-cache');
+  response.setHeader('Expires', '0');
+  response.setHeader('Surrogate-Control', 'no-store');
   response.status(200).send(randomCountry)
 }
 
