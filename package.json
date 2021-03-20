@@ -1,0 +1,16 @@
+{
+  "name": "not-friday",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/node": "^1.9.1",
+    "luxon": "^1.26.0"
+  }
+}
