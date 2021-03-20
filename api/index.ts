@@ -16,6 +16,7 @@ const countries = Array.from(countriesSet);
 const randomCountry = countries[Math.floor(Math.random() * countries.length)]
 
 export default (request: VercelRequest, response: VercelResponse) => {
+  response.setHeader('Cache-Control', 'no-cache, max-age=0, s-maxage=0')
   response.status(200).send(randomCountry)
 }
 
