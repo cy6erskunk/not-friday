@@ -7,6 +7,12 @@
       body {
         font-family: sans-serif;
       }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
     </style>
   </head>
 
@@ -973,7 +979,12 @@
           const title = document.createElement('h3');
           title.textContent = `At least not in ${json.name}`; 
           document.querySelector('#app').appendChild(title);
-          document.querySelector(`#${json.code}`).style.fill = 'red';
+          if (document.querySelector(`#${json.code}`)) {
+            document.querySelector(`#${json.code}`).style.fill = 'red';
+          } else {
+            Array.from(document.querySelectorAll(`.${json.name}`))
+              .forEach(elt => elt.style.fill = 'red')
+          }
         })
     </script>
   </body>
