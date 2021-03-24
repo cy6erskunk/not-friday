@@ -635,7 +635,7 @@ const tzToCountryCode = {
 
 const tzNames = Object.keys(tzToCountryCode);
 
-function getCountriesByTz(tzName: string): Array<{name: string, code: string}> {
+function getCountriesByTz(tzName) {
   if (!tzToCountryCode[tzName]) {
     throw new Error(`Unknown timezone: ${tzName}`);
   }
