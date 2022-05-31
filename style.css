@@ -1,6 +1,10 @@
 body {
-  background: navajowhite;
+  background: #111;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.text-section {
+  color: #999;
 }
